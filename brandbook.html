@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brandbook · Negreiros e Marques Advocacia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cormorant+SC:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-2: #0F1D33;
+    --navy-3: #162842;
+    --ink: #050A14;
+    --gold: #C9A961;
+    --gold-2: #B8944A;
+    --gold-soft: #E4CF94;
+    --cream: #F5F1E8;
+    --cream-2: #E9E2D1;
+    --paper: #FAF7F0;
+    --sepia: #6B4E3D;
+    --emerald: #0F5F4F;
+    --charcoal: #2B2F38;
+    --line: rgba(201,169,97,0.25);
+    --line-strong: rgba(201,169,97,0.55);
+    --serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+    --serif-sc: "Cormorant SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--navy);
+    color: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,22,40,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-brand {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .nav-brand span { color: var(--cream); font-size: 11px; letter-spacing: 4px; display: block; margin-top: 2px; }
+  .nav-menu {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .nav-menu a {
+    color: var(--cream);
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .nav-menu a:hover { opacity: 1; color: var(--gold); }
+  @media (max-width: 900px) { .nav-menu { display: none; } }
+
+  /* ---------- LAYOUT ---------- */
+  section {
+    padding: 140px 8vw;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-kicker {
+    font-family: var(--serif-sc);
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: block;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 88px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+    color: var(--cream);
+  }
+  .section-title em { font-style: italic; color: var(--gold); font-weight: 300; }
+  .lead {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.5;
+    color: var(--cream-2);
+    max-width: 760px;
+    margin-bottom: 56px;
+  }
+  .body-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--cream-2);
+    max-width: 720px;
+  }
+  .body-text + .body-text { margin-top: 20px; }
+
+  /* ---------- CAPA ---------- */
+  .cover {
+    min-height: 100vh;
+    padding: 0 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+      radial-gradient(ellipse at top right, rgba(201,169,97,0.12), transparent 60%),
+      radial-gradient(ellipse at bottom left, rgba(15,95,79,0.08), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, var(--navy) 100%);
+    border-bottom: 1px solid var(--line-strong);
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .cover-seal {
+    font-family: var(--serif-sc);
+    font-size: 12px;
+    letter-spacing: 8px;
+    color: var(--gold);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    display: inline-block;
+  }
+  .cover-title {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(48px, 9vw, 140px);
+    line-height: 0.95;
+    letter-spacing: -1px;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .cover-title strong { font-weight: 500; color: var(--gold); font-style: italic; }
+  .cover-sub {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-style: italic;
+    color: var(--cream-2);
+    max-width: 720px;
+    margin-bottom: 80px;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 60px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cream-2);
+    opacity: 0.7;
+  }
+  .cover-meta div strong {
+    display: block;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  /* ---------- SUMARIO ---------- */
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 48px;
+  }
+  .toc a {
+    background: var(--navy);
+    padding: 32px 28px;
+    transition: background 0.3s, color 0.3s;
+    display: block;
+  }
+  .toc a:hover { background: var(--navy-2); color: var(--gold); }
+  .toc .num {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .toc .label {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cream);
+  }
+
+  /* ---------- MANIFESTO ---------- */
+  .manifesto {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--ink) 100%);
+    text-align: center;
+    padding: 180px 8vw;
+  }
+  .manifesto p {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(26px, 3.5vw, 44px);
+    line-height: 1.4;
+    color: var(--cream);
+    max-width: 1000px;
+    margin: 0 auto 32px;
+  }
+  .manifesto p em { color: var(--gold); font-style: italic; }
+  .manifesto .signature {
+    font-family: var(--serif-sc);
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-top: 60px;
+  }
+
+  /* ---------- PILARES ---------- */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    margin-top: 64px;
+    border: 1px solid var(--line);
+  }
+  .pillar {
+    background: var(--navy-2);
+    padding: 48px 36px;
+  }
+  .pillar-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 48px;
+    color: var(--gold);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .pillar-label {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 12px;
+  }
+  .pillar-title {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+  .pillar-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--cream-2);
+    opacity: 0.85;
+  }
+
+  /* ---------- VALORES ---------- */
+  .values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    margin-top: 56px;
+  }
+  .value {
+    border-left: 2px solid var(--gold);
+    padding: 20px 28px;
+  }
+  .value h4 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .value p {
+    font-size: 14px;
+    color: var(--cream-2);
+    opacity: 0.85;
+  }
+
+  /* ---------- ICP ---------- */
+  .icp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .icp-grid { grid-template-columns: 1fr; gap: 48px; } }
+  .icp-card {
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    padding: 48px;
+  }
+  .icp-card h3 {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: var(--gold);
+  }
+  .icp-card ul {
+    list-style: none;
+    margin-top: 16px;
+  }
+  .icp-card li {
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--cream-2);
+    border-bottom: 1px solid rgba(201,169,97,0.12);
+    display: flex;
+    gap: 16px;
+  }
+  .icp-card li::before {
+    content: "›";
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .icp-card li:last-child { border-bottom: none; }
+
+  .persona-quote {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--cream);
+    padding: 32px 0 32px 32px;
+    border-left: 3px solid var(--gold);
+    margin: 40px 0;
+    max-width: 760px;
+  }
+
+  /* ---------- ARQUETIPO ---------- */
+  .archetype {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .archetype { grid-template-columns: 1fr; } }
+  .archetype-visual {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--navy-3), var(--ink));
+    border: 1px solid var(--line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .archetype-visual::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid var(--line);
+  }
+  .archetype-symbol {
+    font-family: var(--serif);
+    font-size: 160px;
+    font-weight: 300;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  /* ---------- TOM ---------- */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 56px;
+  }
+  .tone-cell {
+    background: var(--navy-2);
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .tone-cell h4 {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .tone-cell p { font-size: 13px; color: var(--cream-2); opacity: 0.85; }
+
+  /* ---------- SIM/NAO ---------- */
+  .yesno {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--line);
+    margin-top: 56px;
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 700px) { .yesno { grid-template-columns: 1fr; } }
+  .yes, .no {
+    background: var(--navy-2);
+    padding: 48px 40px;
+  }
+  .yes h3, .no h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .yes h3 { color: var(--gold); }
+  .no h3 { color: #C97A7A; }
+  .yes .badge, .no .badge {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+    border: 1px solid currentColor;
+  }
+  .yes ul, .no ul {
+    list-style: none;
+  }
+  .yes li, .no li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    color: var(--cream-2);
+  }
+  .yes li:last-child, .no li:last-child { border-bottom: none; }
+
+  /* ---------- QUOTES ---------- */
+  .quotes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 56px;
+  }
+  .quote-card {
+    background: var(--navy-2);
+    border-top: 2px solid var(--gold);
+    padding: 40px 36px;
+  }
+  .quote-card::before {
+    content: """;
+    font-family: var(--serif);
+    font-size: 72px;
+    color: var(--gold);
+    line-height: 0.6;
+    display: block;
+    margin-bottom: 16px;
+  }
+  .quote-card p {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.4;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  /* ---------- LOGO ---------- */
+  .logo-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .logo-showcase { grid-template-columns: 1fr; } }
+  .logo-frame {
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .logo-frame.light { background: var(--cream); }
+  .logo-frame.dark { background: var(--ink); }
+  .logo-frame.navy { background: var(--navy); }
+  .logo-frame.gold { background: var(--gold); }
+  .logo-frame img { max-width: 70%; max-height: 70%; object-fit: contain; }
+  .logo-caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+  .logo-frame.light .logo-caption { color: var(--sepia); }
+  .logo-frame.gold .logo-caption { color: var(--ink); }
+
+  /* CSS Logo (fallback/preview) */
+  .logo-mark {
+    font-family: var(--serif);
+    text-align: center;
+    letter-spacing: 6px;
+    font-weight: 500;
+  }
+  .logo-mark .line1 {
+    font-size: 28px;
+    display: block;
+    letter-spacing: 8px;
+  }
+  .logo-mark .sep {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: currentColor;
+    margin: 8px auto;
+    opacity: 0.6;
+  }
+  .logo-mark .line2 {
+    font-size: 11px;
+    letter-spacing: 12px;
+    font-family: var(--serif-sc);
+    opacity: 0.85;
+  }
+
+  /* ---------- CORES ---------- */
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    margin-top: 56px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .swatch {
+    padding: 48px 28px 28px;
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .swatch .name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .swatch .role {
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+  .swatch .codes {
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    font-family: var(--sans);
+    opacity: 0.85;
+  }
+  .swatch .codes span { display: block; }
+
+  .sw-gold { background: var(--gold); color: var(--ink); }
+  .sw-navy { background: var(--navy); color: var(--cream); border: 1px solid var(--line); }
+  .sw-ink { background: var(--ink); color: var(--cream); }
+  .sw-cream { background: var(--cream); color: var(--ink); }
+  .sw-sepia { background: var(--sepia); color: var(--cream); }
+  .sw-emerald { background: var(--emerald); color: var(--cream); }
+
+  /* ---------- TIPOGRAFIA ---------- */
+  .type-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .type-spec { grid-template-columns: 1fr; } }
+  .type-card {
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    padding: 48px;
+  }
+  .type-specimen {
+    font-family: var(--serif);
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .type-card.sans .type-specimen {
+    font-family: var(--sans);
+    font-weight: 500;
+  }
+  .type-meta {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .type-name {
+    font-family: var(--serif);
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+  .type-desc {
+    font-size: 14px;
+    color: var(--cream-2);
+    opacity: 0.85;
+    margin-bottom: 28px;
+    line-height: 1.7;
+  }
+  .type-weights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .type-weights .w {
+    font-size: 16px;
+    color: var(--cream-2);
+  }
+  .type-card.sans .type-weights .w { font-family: var(--sans); }
+  .type-card:not(.sans) .type-weights .w { font-family: var(--serif); }
+
+  .hierarchy {
+    margin-top: 72px;
+    padding: 56px;
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+  }
+  .h-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    align-items: baseline;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(201,169,97,0.12);
+  }
+  .h-row:last-child { border-bottom: none; }
+  .h-label {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+  .h-example { color: var(--cream); }
+
+  /* ---------- FOTOGRAFIA ---------- */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 56px;
+  }
+  @media (max-width: 900px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } }
+  .photo-grid .photo {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    position: relative;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) contrast(1.05);
+    transition: transform 0.6s, filter 0.6s;
+  }
+  .photo:hover img { transform: scale(1.04); filter: saturate(1) contrast(1.1); }
+  .photo .tag {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--cream);
+    background: rgba(10,22,40,0.7);
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+  }
+
+  .direction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .direction-card {
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    padding: 32px;
+  }
+  .direction-card h4 {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .direction-card p { font-size: 14px; line-height: 1.7; color: var(--cream-2); }
+
+  /* ---------- INSTAGRAM ---------- */
+  .ig-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-top: 56px;
+    align-items: start;
+  }
+  @media (max-width: 1000px) { .ig-wrap { grid-template-columns: 1fr; } }
+  .ig-phone {
+    background: var(--ink);
+    border: 1px solid var(--line);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .ig-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 16px;
+  }
+  .ig-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    color: var(--gold);
+    font-size: 24px;
+  }
+  .ig-handle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cream);
+  }
+  .ig-handle .sub {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--cream-2);
+    opacity: 0.7;
+    display: block;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+  .ig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .ig-post {
+    aspect-ratio: 1;
+    background: var(--navy);
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+  }
+  .ig-post.img-post { padding: 0; }
+  .ig-post.img-post img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.05); }
+  .ig-post.img-post::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(10,22,40,0.85));
+  }
+  .ig-post .overlay {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    font-family: var(--serif);
+    font-size: 10px;
+    color: var(--cream);
+    z-index: 2;
+    text-align: left;
+    line-height: 1.3;
+  }
+  .ig-post .quote-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--cream);
+  }
+  .ig-post .quote-text strong { color: var(--gold); display: block; margin-top: 8px; font-size: 8px; letter-spacing: 2px; font-family: var(--serif-sc); font-style: normal; }
+  .ig-post.gold { background: var(--gold); }
+  .ig-post.gold .quote-text { color: var(--ink); }
+  .ig-post.gold .quote-text strong { color: var(--navy); }
+  .ig-post.cream { background: var(--cream); }
+  .ig-post.cream .quote-text { color: var(--ink); }
+  .ig-post.cream .quote-text strong { color: var(--sepia); }
+
+  .ig-specs h3 {
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .ig-specs ul { list-style: none; }
+  .ig-specs li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(201,169,97,0.12);
+    font-size: 14px;
+    color: var(--cream-2);
+  }
+  .ig-specs li strong {
+    color: var(--gold);
+    display: inline-block;
+    min-width: 120px;
+    font-family: var(--serif-sc);
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  /* ---------- PAPELARIA ---------- */
+  .stationery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 56px;
+  }
+  .card-biz {
+    aspect-ratio: 1.7;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--ink) 100%);
+    border: 1px solid var(--line-strong);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-biz.gold { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%); color: var(--ink); }
+  .card-biz::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--line);
+    transform: rotate(45deg);
+    opacity: 0.4;
+  }
+  .card-biz .cb-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .card-biz.gold .cb-name { color: var(--ink); }
+  .card-biz .cb-role {
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 4px;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+  .card-biz .cb-contact {
+    font-size: 11px;
+    line-height: 1.8;
+    color: var(--cream-2);
+    font-family: var(--sans);
+  }
+  .card-biz.gold .cb-contact { color: var(--ink); opacity: 0.85; }
+  .card-biz .cb-brand {
+    font-family: var(--serif);
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--cream);
+  }
+  .card-biz.gold .cb-brand { color: var(--ink); }
+
+  /* Email sig */
+  .email-sig {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 32px 36px;
+    border: 1px solid var(--line);
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .email-sig-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--navy);
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .email-sig-role {
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold-2);
+    margin-bottom: 16px;
+  }
+  .email-sig-divider {
+    height: 1px;
+    background: var(--gold);
+    width: 40px;
+    margin: 14px 0;
+  }
+  .email-sig-contact { color: var(--charcoal); font-size: 12px; }
+  .email-sig-contact strong { color: var(--navy); }
+  .email-sig-brand {
+    font-family: var(--serif);
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--navy);
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* ---------- TEMPLATES ---------- */
+  .template-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .tmpl {
+    aspect-ratio: 1;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .tmpl.navy { background: var(--navy); }
+  .tmpl.ink { background: var(--ink); }
+  .tmpl.gold { background: var(--gold); color: var(--ink); }
+  .tmpl.cream { background: var(--cream); color: var(--ink); }
+  .tmpl-kicker {
+    font-family: var(--serif-sc);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+  .tmpl.gold .tmpl-kicker { color: var(--navy); }
+  .tmpl.cream .tmpl-kicker { color: var(--gold-2); }
+  .tmpl-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--cream);
+  }
+  .tmpl.gold .tmpl-title, .tmpl.cream .tmpl-title { color: var(--ink); }
+  .tmpl-title em { color: var(--gold); font-style: italic; }
+  .tmpl.gold .tmpl-title em, .tmpl.cream .tmpl-title em { color: var(--sepia); }
+  .tmpl-foot {
+    font-family: var(--serif-sc);
+    font-size: 9px;
+    letter-spacing: 3px;
+    opacity: 0.7;
+  }
+
+  /* ---------- OAB ---------- */
+  .oab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--line);
+    margin-top: 56px;
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 900px) { .oab-grid { grid-template-columns: 1fr; } }
+  .oab-col {
+    background: var(--navy-2);
+    padding: 48px;
+  }
+  .oab-col h3 {
+    font-family: var(--serif);
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  .oab-col.pode h3 { color: var(--gold); }
+  .oab-col.nao h3 { color: #C97A7A; }
+  .oab-col ul { list-style: none; }
+  .oab-col li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+    color: var(--cream-2);
+    line-height: 1.6;
+  }
+  .oab-col li::before {
+    margin-right: 12px;
+    font-weight: 700;
+  }
+  .oab-col.pode li::before { content: "✓"; color: var(--gold); }
+  .oab-col.nao li::before { content: "✕"; color: #C97A7A; }
+
+  .oab-note {
+    margin-top: 48px;
+    padding: 32px;
+    border-left: 3px solid var(--gold);
+    background: var(--navy-2);
+    font-size: 14px;
+    color: var(--cream-2);
+    line-height: 1.8;
+  }
+  .oab-note strong { color: var(--gold); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--ink);
+    padding: 80px 8vw 40px;
+    text-align: center;
+    border-top: 1px solid var(--line-strong);
+  }
+  footer .brand {
+    font-family: var(--serif);
+    font-size: 32px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  footer .sub {
+    font-family: var(--serif-sc);
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--cream-2);
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+  footer .meta {
+    font-size: 12px;
+    color: var(--cream-2);
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+  footer .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 32px auto;
+    opacity: 0.5;
+  }
+
+  .anchor-mark {
+    display: inline-block;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .divider-line {
+    height: 1px;
+    background: var(--line);
+    margin: 64px 0;
+    position: relative;
+  }
+  .divider-line::after {
+    content: "§";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--navy);
+    padding: 0 20px;
+    font-family: var(--serif);
+    color: var(--gold);
+    font-style: italic;
+    font-size: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav">
+  <div class="nav-brand">N&amp;M<span>Brandbook</span></div>
+  <div class="nav-menu">
+    <a href="#essencia">Essência</a>
+    <a href="#posicionamento">Posicionamento</a>
+    <a href="#voz">Tom de Voz</a>
+    <a href="#visual">Identidade Visual</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#oab">OAB</a>
+  </div>
+</nav>
+
+<!-- ====== CAPA ====== -->
+<section class="cover">
+  <div class="cover-seal">MMXXVI · Manual da Marca</div>
+  <h1 class="cover-title">Negreiros<br /><strong>e Marques</strong><br />Advocacia</h1>
+  <p class="cover-sub">O braço jurídico do brasileiro que vive fora &mdash; mas ainda tem raízes, família e patrimônio no Brasil.</p>
+  <div class="cover-meta">
+    <div><strong>Edição</strong>V1.0</div>
+    <div><strong>Escopo</strong>Identidade &middot; Voz &middot; Visual</div>
+    <div><strong>Confidencial</strong>Uso interno</div>
+  </div>
+</section>
+
+<!-- ====== SUMARIO ====== -->
+<section>
+  <span class="section-kicker">Sumário</span>
+  <h2 class="section-title">O que você encontra<br /><em>neste manual</em></h2>
+  <div class="toc">
+    <a href="#essencia"><span class="num">Cap. 01</span><span class="label">Essência da marca</span></a>
+    <a href="#posicionamento"><span class="num">Cap. 02</span><span class="label">Posicionamento</span></a>
+    <a href="#publico"><span class="num">Cap. 03</span><span class="label">Público-alvo</span></a>
+    <a href="#arquetipo"><span class="num">Cap. 04</span><span class="label">Arquétipo</span></a>
+    <a href="#voz"><span class="num">Cap. 05</span><span class="label">Tom de voz</span></a>
+    <a href="#verbal"><span class="num">Cap. 06</span><span class="label">Identidade verbal</span></a>
+    <a href="#logo"><span class="num">Cap. 07</span><span class="label">Logo</span></a>
+    <a href="#cores"><span class="num">Cap. 08</span><span class="label">Paleta de cores</span></a>
+    <a href="#tipografia"><span class="num">Cap. 09</span><span class="label">Tipografia</span></a>
+    <a href="#fotografia"><span class="num">Cap. 10</span><span class="label">Direção fotográfica</span></a>
+    <a href="#instagram"><span class="num">Cap. 11</span><span class="label">Instagram</span></a>
+    <a href="#papelaria"><span class="num">Cap. 12</span><span class="label">Papelaria &amp; e-mail</span></a>
+    <a href="#templates"><span class="num">Cap. 13</span><span class="label">Templates de conteúdo</span></a>
+    <a href="#oab"><span class="num">Cap. 14</span><span class="label">Comunicação OAB-compliant</span></a>
+  </div>
+</section>
+
+<!-- ====== MANIFESTO ====== -->
+<section class="manifesto" id="manifesto">
+  <p><em>Morar fora</em> não significa abrir mão dos seus direitos no Brasil.</p>
+  <p>Distância não é desculpa para deixar sua vida jurídica desorganizada.</p>
+  <p>Seu problema no Brasil <em>tem solução daqui.</em></p>
+  <div class="signature">— Nosso manifesto</div>
+</section>
+
+<!-- ====== ESSENCIA ====== -->
+<section id="essencia">
+  <span class="section-kicker">Capítulo 01 · Essência</span>
+  <h2 class="section-title">O que somos &mdash;<br /><em>antes de qualquer peça.</em></h2>
+  <p class="lead">Somos um escritório brasileiro que atende brasileiros vivendo fora. Nosso propósito é garantir que a distância nunca seja motivo para perda de direitos, atraso em processos ou desorganização patrimonial no Brasil.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <span class="pillar-label">Propósito</span>
+      <h3 class="pillar-title">Por que existimos</h3>
+      <p class="pillar-text">Ser o braço jurídico confiável do brasileiro no exterior. Resolver no Brasil o que a distância atrapalha &mdash; com segurança, clareza e presença.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <span class="pillar-label">Missão</span>
+      <h3 class="pillar-title">O que fazemos</h3>
+      <p class="pillar-text">Cuidar de direitos, heranças, uniões, registros e patrimônio de brasileiros que moram na Europa, EUA e Canadá &mdash; sem que precisem voltar ao Brasil para isso.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <span class="pillar-label">Visão</span>
+      <h3 class="pillar-title">Onde queremos chegar</h3>
+      <p class="pillar-text">Ser a referência em advocacia transfronteiriça para brasileiros fora do país &mdash; reconhecidos pela combinação rara de critério jurídico e cuidado humano.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">04</div>
+      <span class="pillar-label">Promessa</span>
+      <h3 class="pillar-title">O que entregamos</h3>
+      <p class="pillar-text">Você entrega o problema. A gente devolve a solução. Sem você precisar voltar, sem se perder na burocracia, sem ficar sem resposta.</p>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <span class="section-kicker">Valores</span>
+  <h3 class="section-title" style="font-size: clamp(32px, 4vw, 56px);">Seis palavras que<br /><em>guiam cada decisão.</em></h3>
+  <div class="values">
+    <div class="value"><h4>Segurança</h4><p>Cliente não deveria sentir insegurança depois da nossa resposta. Cada passo é explicado.</p></div>
+    <div class="value"><h4>Clareza</h4><p>Linguagem direta. Sem tecniquês que afasta. Sem rodeios que ocupam tempo.</p></div>
+    <div class="value"><h4>Distância zero</h4><p>Estar fora não significa estar longe. Cliente sente a proximidade em cada contato.</p></div>
+    <div class="value"><h4>Resolução</h4><p>Problemas se encerram. Não gerenciamos pendências &mdash; nós as resolvemos.</p></div>
+    <div class="value"><h4>Transparência</h4><p>Prazos, riscos e custos sobre a mesa desde o primeiro dia. Sem surpresas.</p></div>
+    <div class="value"><h4>Confiança</h4><p>Somos o advogado de família que você tem no Brasil &mdash; mesmo que nunca tenha pisado aqui.</p></div>
+  </div>
+</section>
+
+<!-- ====== POSICIONAMENTO ====== -->
+<section id="posicionamento">
+  <span class="section-kicker">Capítulo 02 · Posicionamento</span>
+  <h2 class="section-title">Onde estamos<br /><em>no mercado.</em></h2>
+  <p class="lead">Não somos o escritório que faz volume. Não somos o escritório que promete milagre. Somos o escritório que resolve a vida jurídica brasileira de quem mora fora &mdash; com critério, estratégia e presença digital.</p>
+
+  <div class="persona-quote">
+    "Para brasileiros na Europa, EUA e Canadá com vida jurídica, patrimonial ou familiar ainda ligada ao Brasil,<br />a <strong style="color:var(--gold)">Negreiros e Marques</strong> é o escritório que resolve &mdash; sem você precisar voltar &mdash; porque combinamos critério jurídico brasileiro com a escuta de quem entende o que é viver entre dois países."
+  </div>
+
+  <div class="divider-line"></div>
+
+  <span class="section-kicker">Como nos diferenciamos</span>
+  <h3 class="section-title" style="font-size: clamp(32px, 4vw, 56px);">O que <em>não</em> fazemos<br />é tão importante quanto<br />o que <em>fazemos.</em></h3>
+
+  <div class="yesno">
+    <div class="yes">
+      <h3>Somos <span class="badge">Assim</span></h3>
+      <ul>
+        <li>Consulta estratégica paga &mdash; o diagnóstico tem valor.</li>
+        <li>Seleção criteriosa de casos &mdash; só assumimos o que podemos resolver.</li>
+        <li>Comunicação direta: prazos, riscos, custos reais.</li>
+        <li>Conhecimento bilateral: entendemos a burocracia dos dois lados.</li>
+        <li>Presença digital autoral: conteúdo que educa, não que vende.</li>
+        <li>Resposta em janelas claras, não "quando der".</li>
+      </ul>
+    </div>
+    <div class="no">
+      <h3>Não somos <span class="badge">Assim</span></h3>
+      <ul>
+        <li>Não fazemos volume nem captação em massa.</li>
+        <li>Não prometemos rapidez sem critério.</li>
+        <li>Não trabalhamos com "pacote pronto" para problema único.</li>
+        <li>Não usamos linguagem sensacionalista ou urgência fabricada.</li>
+        <li>Não garantimos resultado &mdash; isso seria antiético e irreal.</li>
+        <li>Não somos o "advogado de balcão". Somos o advogado estratégico.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PUBLICO ====== -->
+<section id="publico">
+  <span class="section-kicker">Capítulo 03 · Público-alvo</span>
+  <h2 class="section-title">Para quem<br /><em>falamos.</em></h2>
+  <p class="lead">Brasileiros entre 28 e 45 anos, vivendo na Europa, Estados Unidos ou Canadá. Construíram uma nova vida fora &mdash; mas não cortaram as raízes com o Brasil. Têm patrimônio, família ou pendências jurídicas que a distância torna mais difíceis de resolver.</p>
+
+  <div class="icp-grid">
+    <div class="icp-card">
+      <h3>Perfil demográfico</h3>
+      <ul>
+        <li><strong>Idade:</strong> 28 a 45 anos</li>
+        <li><strong>Renda:</strong> €5 mil a €12 mil / mês</li>
+        <li><strong>Onde estão:</strong> Portugal, Espanha, Itália, Reino Unido, Alemanha, Suíça, EUA (FL, MA), Canadá</li>
+        <li><strong>Disposição a investir:</strong> R$500 a R$1.500 em consulta &middot; €2 mil a €15 mil em resolução completa</li>
+        <li><strong>Status:</strong> Casados, divorciados, com filhos, com imóveis ou heranças no Brasil</li>
+      </ul>
+    </div>
+    <div class="icp-card">
+      <h3>Perfil psicográfico</h3>
+      <ul>
+        <li>Já tentou resolver algo no Brasil à distância e desistiu.</li>
+        <li>Valoriza advogado que trata como pessoa, não como número.</li>
+        <li>Quer pagar uma vez &mdash; e nunca mais se preocupar.</li>
+        <li>Tem medo de ser enganado justamente por estar longe.</li>
+        <li>Consome conteúdo em português. Segue advogados no Instagram.</li>
+        <li>Valoriza estética profissional e maturidade &mdash; desconfia do que parece "amador".</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="persona-quote">
+    "Me casei aqui na Europa, mas nunca registrei no Brasil. Meu pai faleceu e não sei como fazer o inventário daqui. Quero resolver isso de uma vez &mdash; com alguém que entenda minha situação de quem mora fora."
+    <br /><span style="font-family: var(--serif-sc); font-size: 11px; letter-spacing: 3px; color: var(--gold); font-style: normal; display: block; margin-top: 16px;">&mdash; Voz composta do ICP</span>
+  </div>
+
+  <h3 style="font-family: var(--serif); font-size: 32px; color: var(--gold); margin-top: 64px; margin-bottom: 24px;">Dores mais comuns</h3>
+  <div class="values">
+    <div class="value"><h4 style="font-size: 18px;">Casamento não registrado</h4><p>"Casei aqui, mas nunca registrei no Brasil &mdash; isso é um problema?"</p></div>
+    <div class="value"><h4 style="font-size: 18px;">Divórcio duplicado</h4><p>"Me divorciei aqui mas não sei se vale no Brasil."</p></div>
+    <div class="value"><h4 style="font-size: 18px;">Inventário à distância</h4><p>"Meu pai faleceu e não sei como fazer o inventário daqui."</p></div>
+    <div class="value"><h4 style="font-size: 18px;">Imóvel a regularizar</h4><p>"Tenho um imóvel herdado no Brasil e preciso regularizar."</p></div>
+    <div class="value"><h4 style="font-size: 18px;">Direitos sucessórios</h4><p>"Minha família não me inclui no inventário &mdash; preciso entender meus direitos."</p></div>
+    <div class="value"><h4 style="font-size: 18px;">Registro de filho</h4><p>"Meu filho nasceu aqui &mdash; preciso registrar no Brasil?"</p></div>
+  </div>
+</section>
+
+<!-- ====== ARQUETIPO ====== -->
+<section id="arquetipo">
+  <span class="section-kicker">Capítulo 04 · Arquétipo</span>
+  <h2 class="section-title">O <em>Sábio Soberano.</em></h2>
+  <p class="lead">Nossa marca combina dois arquétipos: o <strong style="color:var(--gold)">Sábio</strong> &mdash; que detém conhecimento e oferece clareza &mdash; e o <strong style="color:var(--gold)">Soberano</strong> &mdash; que zela por território, patrimônio e legado. Juntos formam a figura do conselheiro jurídico de confiança: autoridade sem arrogância, cuidado sem paternalismo.</p>
+
+  <div class="archetype">
+    <div class="archetype-visual">
+      <div class="archetype-symbol">§</div>
+    </div>
+    <div>
+      <h3 style="font-family: var(--serif); font-size: 40px; font-weight: 400; color: var(--cream); margin-bottom: 24px;">O que isso significa<br /><em style="color:var(--gold); font-style: italic;">na prática.</em></h3>
+      <p class="body-text">Falamos a partir do <strong style="color:var(--gold)">conhecimento</strong>, não da urgência. Mostramos <strong style="color:var(--gold)">caminho</strong>, não medo. Tratamos o cliente como alguém que constrói um legado &mdash; e nosso papel é protegê-lo. Linguagem culta mas acessível. Postura segura mas acolhedora. Estética clássica mas contemporânea.</p>
+      <p class="body-text" style="margin-top: 24px;">Não somos o Herói que grita vitórias. Não somos o Inocente que promete fácil. Somos o conselheiro que, depois da consulta, deixa o cliente com a sensação de que finalmente tem alguém cuidando disso &mdash; e pode dormir em paz.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TOM DE VOZ ====== -->
+<section id="voz">
+  <span class="section-kicker">Capítulo 05 · Tom de Voz</span>
+  <h2 class="section-title">Como <em>soamos.</em></h2>
+  <p class="lead">Formal o suficiente para transmitir autoridade. Humano o suficiente para gerar conexão. Direto o suficiente para respeitar o tempo do cliente. Nunca frio. Nunca vendedor. Nunca sensacionalista.</p>
+
+  <div class="tone-grid">
+    <div class="tone-cell"><h4>Sóbrio</h4><p>Linguagem culta, sem exageros. A seriedade vem da clareza, não do peso.</p></div>
+    <div class="tone-cell"><h4>Direto</h4><p>Ir ao ponto. Respeitar o tempo de quem lê. Frases curtas, ideias claras.</p></div>
+    <div class="tone-cell"><h4>Confiável</h4><p>Falamos só o que podemos cumprir. Nunca promessas, sempre compromissos.</p></div>
+    <div class="tone-cell"><h4>Acolhedor</h4><p>Quem nos procura está preocupado. A primeira resposta reduz a ansiedade.</p></div>
+    <div class="tone-cell"><h4>Culto</h4><p>Vocabulário jurídico é traduzido &mdash; não escondido. Educa em vez de afastar.</p></div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Três tons em uma frase</h3>
+  <div class="quotes">
+    <div class="quote-card">
+      <p>Morar fora não significa abrir mão dos seus direitos no Brasil.</p>
+      <div style="font-family: var(--serif-sc); font-size: 11px; letter-spacing: 3px; color: var(--gold); margin-top: 20px;">— Acolhedor · Autoritativo</div>
+    </div>
+    <div class="quote-card">
+      <p>Seu problema no Brasil tem solução daqui.</p>
+      <div style="font-family: var(--serif-sc); font-size: 11px; letter-spacing: 3px; color: var(--gold); margin-top: 20px;">— Direto · Resoluto</div>
+    </div>
+    <div class="quote-card">
+      <p>Distância não é desculpa para deixar sua vida jurídica desorganizada.</p>
+      <div style="font-family: var(--serif-sc); font-size: 11px; letter-spacing: 3px; color: var(--gold); margin-top: 20px;">— Provocador · Maduro</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== IDENTIDADE VERBAL ====== -->
+<section id="verbal">
+  <span class="section-kicker">Capítulo 06 · Identidade Verbal</span>
+  <h2 class="section-title">Palavras que<br /><em>nos representam.</em></h2>
+
+  <div class="yesno">
+    <div class="yes">
+      <h3>Palavras <span class="badge">Usar</span></h3>
+      <ul>
+        <li><strong style="color:var(--gold)">Segurança</strong> &middot; a base de tudo que entregamos</li>
+        <li><strong style="color:var(--gold)">Clareza</strong> &middot; a forma como explicamos</li>
+        <li><strong style="color:var(--gold)">Distância zero</strong> &middot; o diferencial no atendimento</li>
+        <li><strong style="color:var(--gold)">Resolução</strong> &middot; o desfecho que entregamos</li>
+        <li><strong style="color:var(--gold)">Transparência</strong> &middot; sobre prazos, riscos, custos</li>
+        <li><strong style="color:var(--gold)">Confiança</strong> &middot; o vínculo que construímos</li>
+        <li>Direito &middot; Patrimônio &middot; Família &middot; Cuidado</li>
+        <li>Estratégia &middot; Acompanhamento &middot; Solução &middot; Presença</li>
+      </ul>
+    </div>
+    <div class="no">
+      <h3>Palavras <span class="badge">Banir</span></h3>
+      <ul>
+        <li><strong>Complicado</strong> &middot; transmite impotência</li>
+        <li><strong>Processo lento</strong> &middot; tira a confiança</li>
+        <li><strong>Impossível</strong> &middot; não é vocabulário jurídico sério</li>
+        <li><strong>"Não sei"</strong> &middot; substituir por "vou apurar e retorno"</li>
+        <li><strong>Urgência fabricada</strong> &middot; "Última chance", "só hoje"</li>
+        <li><strong>Promessa de resultado</strong> &middot; "garantimos a vitória"</li>
+        <li>"Talvez", "provavelmente", "vamos tentar"</li>
+        <li>"Barato", "rápido", "fácil" &mdash; em qualquer combinação</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <span class="section-kicker">Saudações</span>
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Como chamamos quem nos lê.</h3>
+  <div class="direction-grid">
+    <div class="direction-card">
+      <h4>Pelo nome</h4>
+      <p>Quando for conversa direta &mdash; WhatsApp, e-mail, resposta de comentário. "Maria, o que você descreve é resolvível à distância..."</p>
+    </div>
+    <div class="direction-card">
+      <h4>"Você"</h4>
+      <p>Em anúncios e posts amplos. "Você que mora na Europa e ainda tem imóvel no Brasil..."</p>
+    </div>
+    <div class="direction-card">
+      <h4>Nunca</h4>
+      <p>"Prezado cliente", "Caro leitor", "Nobre colega". Formal demais &mdash; afasta o brasileiro que mora fora há anos.</p>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <span class="section-kicker">Frases-assinatura</span>
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Frases que <em style="color:var(--gold); font-style:italic;">só nós dizemos</em> &mdash; e devemos repetir.</h3>
+  <div class="quotes">
+    <div class="quote-card"><p>Morar fora não significa abrir mão dos seus direitos no Brasil.</p></div>
+    <div class="quote-card"><p>Distância não é desculpa para deixar sua vida jurídica desorganizada.</p></div>
+    <div class="quote-card"><p>Seu problema no Brasil tem solução daqui da Europa.</p></div>
+    <div class="quote-card"><p>Tenha alguém em quem confiar para resolver seus problemas no Brasil.</p></div>
+    <div class="quote-card"><p>Não fazemos volume. Fazemos o que é correto.</p></div>
+    <div class="quote-card"><p>Você entrega o problema. A gente devolve a solução.</p></div>
+  </div>
+</section>
+
+<!-- ====== LOGO ====== -->
+<section id="logo" id="visual">
+  <span class="section-kicker">Capítulo 07 · Logo</span>
+  <h2 class="section-title">Nossa marca<br /><em>gráfica.</em></h2>
+  <p class="lead">O logotipo combina um emblema em escudo com pena estilográfica &mdash; símbolo clássico da advocacia &mdash; e um wordmark sans-serif geométrico condensado em caixa alta. Todas as versões usam a paleta dourado metálico sobre fundos escuros ou creme.</p>
+
+  <div class="logo-showcase">
+    <div class="logo-frame dark">
+      <img src="_drive_cache/img_15_23_17.jpg" alt="Logo principal" />
+      <div class="logo-caption">Principal · fundo escuro</div>
+    </div>
+    <div class="logo-frame light">
+      <img src="_drive_cache/1DXF4djGKDn_img_15_23_16.jpg" alt="Logo versão clara" />
+      <div class="logo-caption">Variação · fundo claro</div>
+    </div>
+    <div class="logo-frame navy">
+      <img src="_drive_cache/1zapLbmM4qv.jpg" alt="Logo horizontal" />
+      <div class="logo-caption">Composição horizontal</div>
+    </div>
+    <div class="logo-frame dark">
+      <img src="_drive_cache/1bHWk7stMYQ.jpg" alt="Logo vertical" />
+      <div class="logo-caption">Composição vertical</div>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Regras de uso</h3>
+  <div class="direction-grid">
+    <div class="direction-card">
+      <h4>Área de proteção</h4>
+      <p>Manter ao redor do logo um espaço livre equivalente à altura da letra "N" do wordmark. Nenhum elemento gráfico, texto ou margem deve invadir essa área.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Tamanho mínimo</h4>
+      <p>40px de altura em digital &middot; 15mm de altura em impressão. Abaixo disso, o emblema perde legibilidade e o wordmark fica ilegível.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Fundos permitidos</h4>
+      <p>Dourado sobre <strong>navy</strong>, <strong>ink</strong> ou <strong>cream</strong>. Em fundos fotográficos, usar apenas sobre áreas de baixo contraste e alta uniformidade tonal.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Usos proibidos</h4>
+      <p>Não distorcer &middot; não alterar cores &middot; não adicionar sombra ou efeitos &middot; não aplicar sobre fundos ruidosos &middot; não rotacionar &middot; não separar o emblema do wordmark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CORES ====== -->
+<section id="cores">
+  <span class="section-kicker">Capítulo 08 · Paleta</span>
+  <h2 class="section-title">As cores<br /><em>da casa.</em></h2>
+  <p class="lead">Dourado + navy são a assinatura. Creme e sépia entram como neutros de apoio em peças editoriais e impressas. Esmeralda funciona como acento sutil &mdash; referência ao retrato da sócia, usar com moderação.</p>
+
+  <div class="palette">
+    <div class="swatch sw-gold">
+      <div>
+        <div class="role">Primária · Assinatura</div>
+        <div class="name">Dourado Negreiros</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #C9A961</span>
+        <span>RGB &nbsp; 201 · 169 · 97</span>
+        <span>CMYK &nbsp; 0 · 16 · 52 · 21</span>
+        <span>PANTONE &nbsp; 871 C</span>
+      </div>
+    </div>
+    <div class="swatch sw-navy">
+      <div>
+        <div class="role">Primária · Base</div>
+        <div class="name">Navy Togado</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #0A1628</span>
+        <span>RGB &nbsp; 10 · 22 · 40</span>
+        <span>CMYK &nbsp; 75 · 45 · 0 · 84</span>
+        <span>PANTONE &nbsp; 539 C</span>
+      </div>
+    </div>
+    <div class="swatch sw-ink">
+      <div>
+        <div class="role">Neutro · Profundidade</div>
+        <div class="name">Tinta</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #050A14</span>
+        <span>RGB &nbsp; 5 · 10 · 20</span>
+        <span>CMYK &nbsp; 75 · 50 · 0 · 92</span>
+      </div>
+    </div>
+    <div class="swatch sw-cream">
+      <div>
+        <div class="role">Neutro · Papel</div>
+        <div class="name">Creme</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #F5F1E8</span>
+        <span>RGB &nbsp; 245 · 241 · 232</span>
+        <span>CMYK &nbsp; 0 · 2 · 5 · 4</span>
+      </div>
+    </div>
+    <div class="swatch sw-sepia">
+      <div>
+        <div class="role">Acento · Editorial</div>
+        <div class="name">Sépia</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #6B4E3D</span>
+        <span>RGB &nbsp; 107 · 78 · 61</span>
+        <span>CMYK &nbsp; 0 · 27 · 43 · 58</span>
+      </div>
+    </div>
+    <div class="swatch sw-emerald">
+      <div>
+        <div class="role">Acento · Sutil</div>
+        <div class="name">Esmeralda</div>
+      </div>
+      <div class="codes">
+        <span>HEX &nbsp; #0F5F4F</span>
+        <span>RGB &nbsp; 15 · 95 · 79</span>
+        <span>CMYK &nbsp; 84 · 0 · 17 · 63</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="oab-note" style="margin-top: 56px;">
+    <strong>Hierarquia de uso.</strong> Navy e Tinta dominam superfícies (70–80%). Dourado é a assinatura: sinalização, tipografia de destaque, detalhes (10–15%). Creme equilibra leitura em peças editoriais. Sépia e Esmeralda são acentos &mdash; aparecem em no máximo 5% da peça.
+  </div>
+</section>
+
+<!-- ====== TIPOGRAFIA ====== -->
+<section id="tipografia">
+  <span class="section-kicker">Capítulo 09 · Tipografia</span>
+  <h2 class="section-title">As letras<br /><em>da marca.</em></h2>
+  <p class="lead">A dupla combina a elegância clássica de uma serif humanista com a neutralidade de uma sans-serif contemporânea. Juntas, equilibram autoridade editorial e legibilidade digital.</p>
+
+  <div class="type-spec">
+    <div class="type-card">
+      <div class="type-specimen">Aa</div>
+      <div class="type-meta">Principal · Display · Editorial</div>
+      <div class="type-name">Cormorant Garamond</div>
+      <div class="type-desc">Serif humanista com traços finos e itálicos expressivos. Usada em títulos, citações, frases-assinatura e peças editoriais. Evoca o mundo jurídico clássico sem parecer datada.</div>
+      <div class="type-weights">
+        <div class="w" style="font-weight:300;">Light · 300</div>
+        <div class="w" style="font-weight:400;">Regular · 400</div>
+        <div class="w" style="font-weight:500;">Medium · 500</div>
+        <div class="w" style="font-weight:600;">Semibold · 600</div>
+        <div class="w" style="font-style:italic;">Italic · para ênfase</div>
+      </div>
+    </div>
+    <div class="type-card sans">
+      <div class="type-specimen">Aa</div>
+      <div class="type-meta">Secundária · Corpo · Digital</div>
+      <div class="type-name">Inter</div>
+      <div class="type-desc">Sans-serif projetada para telas. Clareza máxima em tamanhos pequenos. Usada em corpo de texto, legendas, bios, botões, interface. Neutra sem ser impessoal.</div>
+      <div class="type-weights">
+        <div class="w" style="font-weight:300;">Light · 300</div>
+        <div class="w" style="font-weight:400;">Regular · 400</div>
+        <div class="w" style="font-weight:500;">Medium · 500</div>
+        <div class="w" style="font-weight:600;">Semibold · 600</div>
+        <div class="w" style="font-weight:700;">Bold · 700</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hierarchy">
+    <div class="h-row">
+      <div class="h-label">H1 · Display</div>
+      <div class="h-example" style="font-family: var(--serif); font-size: 56px; font-weight: 400; line-height: 1.05;">Seu direito <em style="color:var(--gold); font-style:italic;">não mora fora.</em></div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">H2 · Seção</div>
+      <div class="h-example" style="font-family: var(--serif); font-size: 36px; font-weight: 500;">Inventário à distância</div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">H3 · Subseção</div>
+      <div class="h-example" style="font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--gold);">O que fazemos</div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">Kicker</div>
+      <div class="h-example" style="font-family: var(--serif-sc); font-size: 13px; letter-spacing: 5px; color: var(--gold);">CAPÍTULO 01 · ESSÊNCIA</div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">Corpo</div>
+      <div class="h-example" style="font-family: var(--sans); font-size: 16px; line-height: 1.75;">Brasileiros que moram fora mantêm laços jurídicos no Brasil &mdash; herança, casamento, registros. Esses laços precisam ser cuidados com a mesma atenção que a vida que se construiu lá fora.</div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">Citação</div>
+      <div class="h-example" style="font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--cream);">"Você entrega o problema. A gente devolve a solução."</div>
+    </div>
+    <div class="h-row">
+      <div class="h-label">Legenda</div>
+      <div class="h-example" style="font-family: var(--sans); font-size: 12px; letter-spacing: 1px; color: var(--cream-2); opacity: 0.7;">Consulta estratégica &middot; diagnóstico completo em 60 minutos</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOTOGRAFIA ====== -->
+<section id="fotografia">
+  <span class="section-kicker">Capítulo 10 · Direção fotográfica</span>
+  <h2 class="section-title">Como nos<br /><em>fotografamos.</em></h2>
+  <p class="lead">A fotografia da marca é editorial, cinematográfica e atemporal. Ambientes sofisticados, iluminação dramática, materiais nobres, vestuário clássico. O cliente precisa reconhecer, na imagem, o tipo de escritório que ele quer contratar &mdash; antes mesmo de ler uma palavra.</p>
+
+  <div class="photo-grid">
+    <div class="photo"><img src="_drive_cache/17TcVGsbrWS.jpg" alt="Retrato conjunto" /><div class="tag">Retrato conjunto · estúdio sépia</div></div>
+    <div class="photo"><img src="_drive_cache/1q-n52kcTTV.jpg" alt="Retrato ambiente" /><div class="tag">Ambiente · bar clássico</div></div>
+    <div class="photo"><img src="_drive_cache/19fSaVT0UJh.jpg" alt="Colaboração" /><div class="tag">Colaboração · mesa de trabalho</div></div>
+    <div class="photo"><img src="_drive_cache/17B8Dl5JqzU.jpg" alt="Solo formal" /><div class="tag">Retrato solo · estúdio</div></div>
+    <div class="photo"><img src="_drive_cache/16xdg2nvPy6.jpg" alt="Ambiente pedra" /><div class="tag">Ambiente · pedra + bronze</div></div>
+    <div class="photo"><img src="_drive_cache/130YcpAZgHs.jpg" alt="Interior clássico" /><div class="tag">Interior · boiserie francesa</div></div>
+    <div class="photo"><img src="_drive_cache/1VEYWQbyQkf.jpg" alt="Lateral" /><div class="tag">Lateral · piscina</div></div>
+    <div class="photo"><img src="_drive_cache/1IP0f3GTE0W.jpg" alt="Cristal" /><div class="tag">Ambiente · lustre cristal</div></div>
+    <div class="photo"><img src="_drive_cache/19rLjvPN6fu.jpg" alt="Estúdio concreto" /><div class="tag">Estúdio · fundo texturizado</div></div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Diretrizes de produção</h3>
+  <div class="direction-grid">
+    <div class="direction-card">
+      <h4>Iluminação</h4>
+      <p>Luz lateral dramática, temperatura quente (3200K–3800K). Priorizar fontes visíveis no quadro (arandelas, lustres, janelões). Evitar flash frontal &mdash; achata a imagem e a marca.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Cenário</h4>
+      <p>Ambientes com materiais nobres: pedra natural, mármore, bronze, madeira escura, cristal, cetim. Interiores clássicos &mdash; boiseries, poltronas Luís XV, espelhos trabalhados. Nunca escritório genérico.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Vestuário</h4>
+      <p>Ternos carvão ou preto, camisa branca, gravatas em navy, grafite ou azul discreto. Para a sócia: peças em cetim, tons de esmeralda, branco ou preto, acessórios em ouro. Nunca casual.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Expressão</h4>
+      <p>Séria mas não fria. Confiante mas não arrogante. Olhar pode ser frontal (autoridade) ou lateral (contemplativo). Sorrisos são permitidos só em peças colaborativas/cotidianas &mdash; nunca em hero shots.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Pós-produção</h4>
+      <p>Saturação levemente reduzida, contraste levemente elevado. Tom sépia/quente sutil. Preservar textura de pele e tecido. Nunca filtro de Instagram. Nunca HDR. Nunca preto-e-branco.</p>
+    </div>
+    <div class="direction-card">
+      <h4>Proibido</h4>
+      <p>Fotos com stock look (mãos em aperto, balança de Themis genérica, martelo de juiz). Selfies. Fundos bagunçados. Roupas casuais ou estampadas. Iluminação fluorescente. Ângulos forçados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== INSTAGRAM ====== -->
+<section id="instagram" id="aplicacoes">
+  <span class="section-kicker">Capítulo 11 · Aplicações · Instagram</span>
+  <h2 class="section-title">O perfil<br /><em>institucional.</em></h2>
+  <p class="lead">O Instagram @negreiroseMarques é a vitrine principal. Falamos mais sobre o escritório do que sobre os sócios. Cada post responde a uma dor, um desejo ou uma objeção do ICP &mdash; sempre educativo, nunca vendedor.</p>
+
+  <div class="ig-wrap">
+    <div class="ig-phone">
+      <div class="ig-header">
+        <div class="ig-avatar">§</div>
+        <div class="ig-handle">negreiroseMarques<span class="sub">Advocacia para brasileiros na Europa, EUA e Canadá. Resolvemos no Brasil o que a distância atrapalha.</span></div>
+      </div>
+      <div class="ig-grid">
+        <div class="ig-post img-post"><img src="_drive_cache/17TcVGsbrWS.jpg" alt="" /><div class="overlay" style="font-family: var(--serif); font-style: italic; font-size: 12px;">Conheça o escritório</div></div>
+        <div class="ig-post"><div class="quote-text">"Morar fora não significa abrir mão dos seus direitos no Brasil."<strong>Frase · 01</strong></div></div>
+        <div class="ig-post gold"><div class="quote-text">Inventário à distância<strong>Dor · 01</strong></div></div>
+        <div class="ig-post img-post"><img src="_drive_cache/19fSaVT0UJh.jpg" alt="" /><div class="overlay">Consulta estratégica</div></div>
+        <div class="ig-post cream"><div class="quote-text">Registrar casamento no Brasil<strong>Carrossel · 04</strong></div></div>
+        <div class="ig-post"><div class="quote-text">"Seu problema no Brasil tem solução daqui."<strong>Frase · 02</strong></div></div>
+        <div class="ig-post img-post"><img src="_drive_cache/1q-n52kcTTV.jpg" alt="" /><div class="overlay">Quem somos</div></div>
+        <div class="ig-post gold"><div class="quote-text">Direitos de herança<strong>Educativo · 03</strong></div></div>
+        <div class="ig-post"><div class="quote-text">"Não fazemos volume. Fazemos o correto."<strong>Frase · 03</strong></div></div>
+      </div>
+    </div>
+
+    <div class="ig-specs">
+      <h3>Estrutura do feed</h3>
+      <ul>
+        <li><strong>Ritmo</strong>3 posts por semana &middot; rotação 1-2-1 entre fotografia, citação e educativo</li>
+        <li><strong>Grid</strong>Modular &mdash; blocos navy, dourado, creme e fotografia se alternam formando composição visual equilibrada</li>
+        <li><strong>Fotografia</strong>Retratos institucionais, bastidores, detalhes de ambiente. Nunca meme, nunca stock</li>
+        <li><strong>Citações</strong>Frases-assinatura da marca, em Cormorant Garamond itálico, fundo navy ou dourado</li>
+        <li><strong>Educativo</strong>Dor &rarr; diagnóstico &rarr; convite para consulta. Sem promessa de resultado</li>
+        <li><strong>Carrossel</strong>Capa impactante &middot; 5-7 páginas &middot; última slide com CTA sóbrio</li>
+        <li><strong>Stories</strong>Capa navy com texto dourado em Cormorant &middot; bastidores em tom editorial</li>
+        <li><strong>Destaques</strong>Ícones em dourado sobre navy, linha fina geométrica. Capas "Sobre", "Europa", "EUA", "Consulta", "Casos públicos"</li>
+        <li><strong>Bio</strong>"Advocacia para brasileiros na Europa, EUA e Canadá &middot; Resolvemos no Brasil o que a distância atrapalha &middot; Agende a consulta estratégica 👇"</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PAPELARIA ====== -->
+<section id="papelaria">
+  <span class="section-kicker">Capítulo 12 · Papelaria &amp; E-mail</span>
+  <h2 class="section-title">Aplicações<br /><em>impressas e digitais.</em></h2>
+  <p class="lead">Cartão, assinatura de e-mail, timbrado e apresentação compartilham a mesma estrutura: navy dominante, dourado para o nome e hierarquia, sans serif limpa para o contato.</p>
+
+  <div class="stationery">
+    <div class="card-biz">
+      <div>
+        <div class="cb-name">NEGREIROS E MARQUES</div>
+        <div class="cb-role">ADVOCACIA</div>
+      </div>
+      <div class="cb-contact">
+        contato@negreiroseMarques.com.br<br />
+        +55 (00) 00000-0000<br />
+        negreiroseMarques.com.br
+      </div>
+      <div class="cb-brand">§</div>
+    </div>
+    <div class="card-biz gold">
+      <div>
+        <div class="cb-name">Sócio · Advogado</div>
+        <div class="cb-role">OAB/XX 000.000</div>
+      </div>
+      <div class="cb-contact">
+        socio@negreiroseMarques.com.br<br />
+        +55 (00) 00000-0000<br />
+        negreiroseMarques.com.br
+      </div>
+      <div class="cb-brand">N&amp;M</div>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <h3 style="font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); color: var(--cream); margin-bottom: 32px;">Assinatura de e-mail</h3>
+  <div class="email-sig">
+    <div class="email-sig-name">Nome do Sócio</div>
+    <div class="email-sig-role">ADVOGADO · OAB/XX 000.000</div>
+    <div class="email-sig-divider"></div>
+    <div class="email-sig-contact">
+      <strong>E</strong> socio@negreiroseMarques.com.br<br />
+      <strong>T</strong> +55 (00) 00000-0000<br />
+      <strong>W</strong> negreiroseMarques.com.br
+    </div>
+    <div class="email-sig-brand">NEGREIROS E MARQUES ADVOCACIA</div>
+  </div>
+
+  <div class="oab-note" style="margin-top: 40px;">
+    <strong>Regra.</strong> Toda assinatura profissional deve conter nome completo, número da OAB e seccional. Número da OAB é obrigatório em qualquer comunicação que identifique o advogado individualmente &mdash; Provimento 205/2021.
+  </div>
+</section>
+
+<!-- ====== TEMPLATES ====== -->
+<section id="templates">
+  <span class="section-kicker">Capítulo 13 · Templates</span>
+  <h2 class="section-title">Modelos<br /><em>de conteúdo.</em></h2>
+  <p class="lead">Seis modelos cobrem 90% das publicações. Todos seguem a mesma estrutura: kicker + título serif + remetente. Variam apenas em paleta e posicionamento do texto.</p>
+
+  <h3 style="font-family: var(--serif-sc); font-size: 14px; letter-spacing: 4px; color: var(--gold); margin-top: 56px; margin-bottom: 16px;">Modelo 01 · Frase-assinatura</h3>
+  <div class="template-row">
+    <div class="tmpl navy">
+      <div class="tmpl-kicker">MANIFESTO · 01</div>
+      <div class="tmpl-title">Morar fora não significa <em>abrir mão dos seus direitos</em> no Brasil.</div>
+      <div class="tmpl-foot">NEGREIROS E MARQUES</div>
+    </div>
+    <div class="tmpl gold">
+      <div class="tmpl-kicker">MANIFESTO · 02</div>
+      <div class="tmpl-title">Seu problema no Brasil <em>tem solução</em> daqui.</div>
+      <div class="tmpl-foot">NEGREIROS E MARQUES</div>
+    </div>
+    <div class="tmpl ink">
+      <div class="tmpl-kicker">MANIFESTO · 03</div>
+      <div class="tmpl-title">Distância <em>não é desculpa</em> para desorganização jurídica.</div>
+      <div class="tmpl-foot">NEGREIROS E MARQUES</div>
+    </div>
+  </div>
+
+  <h3 style="font-family: var(--serif-sc); font-size: 14px; letter-spacing: 4px; color: var(--gold); margin-top: 56px; margin-bottom: 16px;">Modelo 02 · Dor &rarr; Convite</h3>
+  <div class="template-row">
+    <div class="tmpl navy">
+      <div class="tmpl-kicker">DOR · 01</div>
+      <div class="tmpl-title">Casou fora mas <em>não registrou</em> no Brasil?</div>
+      <div class="tmpl-foot">CONVERSE COM A GENTE</div>
+    </div>
+    <div class="tmpl cream">
+      <div class="tmpl-kicker">DOR · 02</div>
+      <div class="tmpl-title">Herança no Brasil e <em>você está longe.</em></div>
+      <div class="tmpl-foot">AGENDE A CONSULTA</div>
+    </div>
+    <div class="tmpl navy">
+      <div class="tmpl-kicker">DOR · 03</div>
+      <div class="tmpl-title">Divorciou fora. <em>E no Brasil,</em> como fica?</div>
+      <div class="tmpl-foot">CONVERSE COM A GENTE</div>
+    </div>
+  </div>
+
+  <h3 style="font-family: var(--serif-sc); font-size: 14px; letter-spacing: 4px; color: var(--gold); margin-top: 56px; margin-bottom: 16px;">Modelo 03 · Educativo (carrossel)</h3>
+  <div class="template-row">
+    <div class="tmpl ink">
+      <div class="tmpl-kicker">CARROSSEL · CAPA</div>
+      <div class="tmpl-title">3 erros comuns em <em>inventário</em> à distância.</div>
+      <div class="tmpl-foot">DESLIZE →</div>
+    </div>
+    <div class="tmpl navy">
+      <div class="tmpl-kicker">PÁGINA 02</div>
+      <div class="tmpl-title"><em>01 · </em>Esperar demais para abrir o processo.</div>
+      <div class="tmpl-foot">02 / 05</div>
+    </div>
+    <div class="tmpl gold">
+      <div class="tmpl-kicker">CARROSSEL · FIM</div>
+      <div class="tmpl-title">Quer entender <em>seu caso?</em> Agende uma consulta.</div>
+      <div class="tmpl-foot">LINK NA BIO</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== OAB ====== -->
+<section id="oab">
+  <span class="section-kicker">Capítulo 14 · Compliance</span>
+  <h2 class="section-title">Comunicação<br /><em>OAB-compliant.</em></h2>
+  <p class="lead">Toda peça &mdash; post, anúncio, artigo, e-mail &mdash; segue o Provimento 205/2021 do Conselho Federal da OAB. Em caso de dúvida, a regra é: o conteúdo <strong style="color:var(--gold)">educa</strong> ou <strong style="color:var(--gold)">informa</strong>. Nunca promete, nunca capta por sensação.</p>
+
+  <div class="oab-grid">
+    <div class="oab-col pode">
+      <h3>Podemos</h3>
+      <ul>
+        <li>Publicar conteúdo educativo, informativo e jurídico autoral.</li>
+        <li>Divulgar áreas de atuação e especialidades.</li>
+        <li>Informar formação acadêmica e experiência profissional.</li>
+        <li>Publicar artigos, pareceres e análises de decisões.</li>
+        <li>Oferecer contato profissional (e-mail, site, telefone).</li>
+        <li>Usar fotografia profissional e vídeos institucionais sóbrios.</li>
+        <li>Convidar para consultas jurídicas (sem forçar).</li>
+        <li>Explicar o processo de atendimento de forma transparente.</li>
+      </ul>
+    </div>
+    <div class="oab-col nao">
+      <h3>Não podemos</h3>
+      <ul>
+        <li>Prometer resultado, vitória ou sucesso em casos.</li>
+        <li>Oferecer serviços em tom mercantil (desconto, promoção, cupom).</li>
+        <li>Comparar o escritório com concorrentes ou outros advogados.</li>
+        <li>Divulgar valores de honorários abertamente.</li>
+        <li>Usar linguagem sensacionalista, urgência fabricada ou apelação.</li>
+        <li>Captar por meio de depoimentos emocionais de clientes.</li>
+        <li>Ocultar número da OAB em comunicações de advogado.</li>
+        <li>Divulgar casos específicos sem autorização e sem anonimização.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="oab-note">
+    <strong>Regra prática.</strong> Antes de publicar, pergunte-se: <em>"Se esse post fosse lido por um conselheiro da OAB, ele identificaria captação indevida, mercantilização ou promessa de resultado?"</em> Se a resposta for sim &mdash; ou "talvez" &mdash; a peça volta para reescrita. É melhor publicar menos do que publicar errado.
+  </div>
+
+  <div class="oab-note" style="margin-top: 16px;">
+    <strong>Citação da norma.</strong> Provimento 205/2021 CFOAB &mdash; Art. 5º: <em>"A publicidade profissional do advogado tem caráter meramente informativo e deve primar pela discrição e sobriedade, não podendo configurar captação de clientela ou mercantilização da profissão."</em>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="brand">N &amp; M</div>
+  <div class="sub">NEGREIROS E MARQUES ADVOCACIA</div>
+  <div class="divider"></div>
+  <div class="meta">Brandbook V1.0 &middot; 2026 &middot; Documento de uso interno &middot; Confidencial</div>
+</footer>
+
+</body>
+</html>
