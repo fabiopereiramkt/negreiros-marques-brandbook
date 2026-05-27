@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Webinário On-Demand · Casamento e Divórcio Internacional | Negreiros e Marques Advocacia</title>
+<meta name="description" content="Webinário gratuito para brasileiros no exterior: como casar ou se divorciar de forma legal, segura e válida no Brasil, sem erros, sem retrabalho. Acesso imediato.">
+<meta name="theme-color" content="#050A14">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Webinário On-Demand · Casamento e Divórcio Internacional">
+<meta property="og:description" content="Para brasileiros que vivem fora: regularize sua vida civil entre Brasil e exterior com segurança, clareza e estratégia.">
+<meta property="og:site_name" content="Negreiros e Marques Advocacia">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23050A14'/%3E%3Ctext%20x='50%25'%20y='55%25'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-style='italic'%20font-size='18'%20fill='%23C9A961'%3EN%26%23183%3BM%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:        #0A1628;
+    --navy-2:      #0F1D33;
+    --navy-3:      #162842;
+    --ink:         #050A14;
+    --gold:        #C9A961;
+    --gold-2:      #B8944A;
+    --gold-soft:   #E4CF94;
+    --cream:       #F5F1E8;
+    --cream-2:     #E9E2D1;
+    --paper:       #FAF7F0;
+    --sepia:       #6B4E3D;
+    --emerald:     #0F5F4F;
+    --charcoal:    #2B2F38;
+    --line:        rgba(201,169,97,0.25);
+    --line-strong: rgba(201,169,97,0.55);
+    --error:       #C97A7A;
+    --ok:          #8FB8A0;
+
+    --serif:    "Cormorant Garamond", Georgia, serif;
+    --serif-sc: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
+    --sans:     "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html, body{min-height:100%;}
+  html{ -webkit-text-size-adjust: 100%; }
+  body{
+    font-family: var(--sans);
+    background:
+      radial-gradient(1100px 700px at 80% -5%, rgba(201,169,97,0.10), transparent 60%),
+      radial-gradient(900px 700px at 10% 105%, rgba(15,95,79,0.06), transparent 60%),
+      var(--ink);
+    background-attachment: fixed;
+    color: var(--cream);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    line-height:1.6;
+    overflow-x: hidden;
+  }
+  ::selection{background: rgba(201,169,97,0.4); color: var(--cream);}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  input, button{ font-family: inherit; }
+
+  /* ============== ENTRY ANIMATIONS ============== */
+  @keyframes rise{
+    from{opacity:0; transform: translateY(14px);}
+    to{opacity:1; transform: translateY(0);}
+  }
+  @keyframes drift{
+    from{opacity:0; transform: translate(0,18px) scale(0.985);}
+    to{opacity:1; transform: translate(0,0) scale(1);}
+  }
+  .left > *{ animation: rise .8s cubic-bezier(.2,.7,.25,1) both; }
+  .left > .logo-lockup{animation-delay: 0s;}
+  .left > .eyebrow{animation-delay: .08s;}
+  .left > h1{animation-delay: .14s;}
+  .left > .lead{animation-delay: .22s;}
+  .left > .meta-row{animation-delay: .30s;}
+  .left > .promise{animation-delay: .38s;}
+  .left > .sig-quote{animation-delay: .46s;}
+  .form-card{animation: drift 1s cubic-bezier(.2,.8,.25,1) .15s both;}
+
+  @media (prefers-reduced-motion: reduce){
+    .left > *, .form-card{animation: none !important;}
+    .eyebrow .dot{animation: none !important;}
+  }
+
+  /* ============== LAYOUT ============== */
+  .stage{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+  @media (min-width: 1001px){
+    .stage{height: 100vh; min-height: 640px;}
+    .left, .right{height: 100vh; min-height: 640px; overflow: hidden;}
+  }
+  @media (max-width: 1000px){
+    .stage{grid-template-columns: 1fr; min-height: auto;}
+  }
+
+  /* ---------- left column ---------- */
+  .left{
+    position:relative;
+    background: transparent;
+    padding: 28px clamp(20px, 4vw, 64px);
+    padding-top: max(28px, env(safe-area-inset-top));
+    display:flex; flex-direction:column;
+    overflow:hidden;
+  }
+  .left::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.08;
+    pointer-events:none;
+  }
+  .left > *{position:relative; z-index:1;}
+
+  .logo-lockup{
+    display:flex; align-items:center; gap:14px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .logo-lockup img{
+    height: clamp(56px, 7vh, 78px); width:auto;
+    filter: drop-shadow(0 6px 20px rgba(201,169,97,0.18));
+    margin-left: -6px;
+  }
+  .logo-lockup .meta{
+    display:flex; flex-direction:column;
+    font-family: var(--serif-sc);
+    font-size: 10px; letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .logo-lockup .meta b{
+    font-family: var(--serif); font-size: 14px; letter-spacing: 3px;
+    color: var(--cream); margin-bottom: 4px; font-weight:500;
+  }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:12px;
+    font-family: var(--serif-sc);
+    font-size: 11px; letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .eyebrow .dot{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 0 rgba(201,169,97,0.6);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(201,169,97,0.55);}
+    70%{box-shadow:0 0 0 14px rgba(201,169,97,0);}
+    100%{box-shadow:0 0 0 0 rgba(201,169,97,0);}
+  }
+
+  h1.title{
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.8vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--cream);
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
+  h1.title em{ font-style: italic; color: var(--gold); font-weight: 400; }
+  h1.title .small{
+    display:block;
+    font-family: var(--serif-sc);
+    font-size: clamp(11px, 0.85vw, 13px);
+    letter-spacing: 5px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .lead{
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(15px, 1.25vw, 18px);
+    line-height: 1.45;
+    color: var(--cream-2);
+    margin-bottom: 20px;
+    max-width: 580px;
+  }
+  .lead strong{ color: var(--cream); font-weight: 500; }
+
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap: 10px 22px;
+    margin-bottom: 22px;
+    padding: 12px 0 14px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .meta-row .item{ display:flex; align-items:center; gap:10px; }
+  .meta-row .ico{
+    width:28px; height:28px; border-radius:50%;
+    border: 1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .meta-row .ico svg{width:12px; height:12px;}
+  .meta-row .txt{
+    display:flex; flex-direction:column;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--cream-2); opacity:.7;
+    font-family: var(--serif-sc);
+    line-height: 1.2;
+  }
+  .meta-row .txt b{
+    color: var(--cream); font-weight:500;
+    font-family: var(--serif); font-size: 13px; letter-spacing: 0.5px;
+    text-transform:none;
+    margin-bottom: 1px;
+  }
+
+  .promise{ margin-bottom: 20px; }
+  .promise h3{
+    font-family: var(--serif-sc);
+    font-size: 10px; letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .promise ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 22px;
+  }
+  .promise li{
+    display:flex; gap: 10px; align-items:flex-start;
+    font-size: 12.5px; line-height: 1.4;
+    color: var(--cream-2);
+  }
+  .promise li b{color: var(--cream); font-weight: 500;}
+  .promise .num{
+    flex-shrink:0;
+    font-family: var(--serif);
+    font-style: italic; font-weight: 400;
+    font-size: 18px; line-height: 1;
+    color: var(--gold);
+    width: 20px;
+  }
+  @media (max-width: 640px){
+    .promise ul{grid-template-columns: 1fr;}
+  }
+
+  .sig-quote{
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(13px, 1vw, 16px);
+    line-height: 1.4;
+    color: var(--cream);
+    max-width: 560px;
+  }
+  .sig-quote::before{
+    content: "§";
+    display:block;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .sig-quote b{color: var(--gold); font-weight: 400;}
+
+  /* ---------- right column ---------- */
+  .right{
+    position: relative;
+    background: transparent;
+    padding: 32px clamp(20px, 4vw, 64px);
+    padding-bottom: max(32px, env(safe-area-inset-bottom));
+    display:flex; flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .right::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.08;
+    pointer-events:none;
+  }
+  .right > *{position: relative; z-index: 1;}
+
+  .form-card{
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(22,40,66,0.88), rgba(15,29,51,0.92));
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 36px clamp(22px, 5vw, 36px) 32px;
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.45),
+      0 10px 28px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .form-card .ornt{
+    position:absolute; width:14px; height:14px;
+    border: 1px solid var(--gold);
+    opacity: .7;
+    pointer-events:none;
+  }
+  .form-card .ornt.tl{top:8px; left:8px; border-right:none; border-bottom:none;}
+  .form-card .ornt.tr{top:8px; right:8px; border-left:none; border-bottom:none;}
+  .form-card .ornt.bl{bottom:8px; left:8px; border-right:none; border-top:none;}
+  .form-card .ornt.br{bottom:8px; right:8px; border-left:none; border-top:none;}
+
+  .form-card .crest{
+    position:absolute;
+    top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--ink);
+    padding: 4px 14px;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 2px;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+    z-index: 2;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    white-space: nowrap;
+  }
+
+  .form-wrap{ width: 100%; margin: 0 auto; }
+
+  .form-eyebrow{
+    font-family: var(--serif-sc);
+    font-size: 11px; letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display:flex; align-items:center; gap: 10px;
+  }
+  .form-eyebrow::before, .form-eyebrow::after{
+    content:""; flex:1; height:1px;
+    background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  }
+
+  h2.form-title{
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(24px, 2.4vw, 32px);
+    line-height: 1.1;
+    text-align:center;
+    color: var(--cream);
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+  h2.form-title em{font-style:italic; color: var(--gold); font-weight:400;}
+
+  .form-sub{
+    text-align:center;
+    color: var(--cream-2);
+    font-size: 13px; line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: .9;
+  }
+  .form-sub b{color: var(--gold); font-weight: 500;}
+
+  .field{margin-bottom: 12px;}
+  .field label{
+    display:block;
+    font-family: var(--serif-sc);
+    font-size: 10px; letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .field label .req{color: var(--gold-soft); margin-left: 4px;}
+
+  .input-wrap{
+    position:relative;
+    display:flex; align-items:center;
+    background: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    transition: border-color .25s, box-shadow .25s, background .25s;
+  }
+  .input-wrap:hover{border-color: rgba(201,169,97,0.45);}
+  .input-wrap:focus-within{
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,169,97,0.12);
+  }
+  .input-wrap.error{
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(201,122,122,0.15);
+  }
+  .input-wrap.valid{border-color: rgba(143,184,160,0.45);}
+
+  .input-wrap .ico-left{
+    width: 38px;
+    display:flex; align-items:center; justify-content:center;
+    color: rgba(245,241,232,0.4);
+    flex-shrink:0;
+  }
+  .input-wrap input{
+    flex:1; min-width:0;
+    background: transparent;
+    border: none; outline: none;
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 16px; /* 16px evita zoom automático no iOS */
+    padding: 12px 12px 12px 0;
+    letter-spacing: 0.01em;
+  }
+  .input-wrap input::placeholder{color: rgba(245,241,232,0.32);}
+  .check-glyph{
+    width: 40px; display:flex; align-items:center; justify-content:center;
+    color: var(--ok); opacity: 0; transition: opacity .2s;
+  }
+  .input-wrap.valid .check-glyph{opacity: 1;}
+
+  .err-msg{
+    font-size: 11px; color: var(--error);
+    margin-top: 4px;
+    min-height: 14px;
+    font-family: var(--sans);
+  }
+
+  .phone-row{
+    display:grid;
+    grid-template-columns: 84px 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+  .ddd-wrap .input-wrap input{
+    text-align:center;
+    letter-spacing: 0.12em;
+    padding: 12px 8px;
+  }
+
+  .btn-submit{
+    margin-top: 6px;
+    width: 100%;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-family: var(--serif-sc);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 16px 24px;
+    background: linear-gradient(180deg, var(--gold-soft) 0%, var(--gold) 55%, var(--gold-2) 100%);
+    border-radius: 2px;
+    box-shadow:
+      0 14px 32px rgba(201,169,97,0.22),
+      inset 0 1px 0 rgba(255,255,255,0.45),
+      inset 0 -1px 0 rgba(0,0,0,0.18);
+    transition: transform .15s, filter .2s, box-shadow .2s;
+    overflow:hidden;
+    min-height: 48px; /* alvo de toque acessível */
+  }
+  .btn-submit:hover{
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+  }
+  .btn-submit:active{transform: translateY(0);}
+  .btn-submit:disabled{ opacity: .6; cursor: wait; }
+  .btn-submit .arrow{
+    display:inline-block; margin-left: 10px;
+    transition: transform .2s;
+  }
+  .btn-submit:hover .arrow{transform: translateX(4px);}
+
+  .form-trust{
+    margin-top: 14px;
+    display:flex; align-items:center; justify-content:center; gap: 8px;
+    font-size: 10px; color: var(--cream-2); opacity:.6;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    font-family: var(--serif-sc);
+    text-align: center;
+  }
+  .form-trust svg{width:11px; height:11px; flex-shrink:0;}
+
+  /* ============== SUCCESS / PLAYER STATE ============== */
+  .player-wrap{display:none;}
+  body.submitted .form-wrap{display:none;}
+  body.submitted .player-wrap{display:flex;}
+
+  .player-wrap{
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    animation: fade-up .5s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes fade-up{
+    from{opacity:0; transform: translateY(14px);}
+    to{opacity:1; transform: translateY(0);}
+  }
+
+  .seal{
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: radial-gradient(circle at 35% 30%, var(--gold-soft), var(--gold-2));
+    color: var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:
+      0 14px 32px rgba(201,169,97,0.32),
+      inset 0 2px 0 rgba(255,255,255,0.4);
+    animation: stamp .55s cubic-bezier(.2,.9,.3,1.2) .1s both;
+  }
+  @keyframes stamp{0%{transform:scale(.5); opacity:0;} 100%{transform:scale(1); opacity:1;}}
+
+  .player-eyebrow{
+    text-align:center;
+    font-family: var(--serif-sc);
+    font-size: 11px; letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .player-title{
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.1;
+    color: var(--cream);
+    text-align:center;
+    margin-bottom: 10px;
+    text-wrap: balance;
+  }
+  .player-title em{font-style:italic; color: var(--gold);}
+  .player-greet{
+    text-align:center;
+    color: var(--cream-2); opacity:.85;
+    font-size: 14px; line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .video-frame{
+    position: relative;
+    aspect-ratio: 16/9;
+    width: 100%;
+    background: linear-gradient(135deg, var(--navy-3), var(--ink));
+    border: 1px solid var(--line-strong);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .video-frame::before{
+    content:"";
+    position:absolute; inset:14px;
+    border: 1px solid var(--line);
+    pointer-events:none;
+  }
+  .video-frame .play{
+    position:absolute; top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--gold-soft), var(--gold-2));
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 18px 36px rgba(201,169,97,0.35), inset 0 2px 0 rgba(255,255,255,0.4);
+    transition: transform .2s, filter .2s;
+  }
+  .video-frame:hover .play{transform: translate(-50%, -50%) scale(1.06); filter: brightness(1.06);}
+  .video-frame .play svg{width: 28px; height: 28px; color: var(--ink); margin-left: 4px;}
+  .video-frame .corner{
+    position:absolute; width:18px; height:18px;
+    border: 1px solid var(--gold); opacity:.7;
+  }
+  .video-frame .corner.tl{top:6px; left:6px; border-right:none; border-bottom:none;}
+  .video-frame .corner.tr{top:6px; right:6px; border-left:none; border-bottom:none;}
+  .video-frame .corner.bl{bottom:6px; left:6px; border-right:none; border-top:none;}
+  .video-frame .corner.br{bottom:6px; right:6px; border-left:none; border-top:none;}
+  .video-frame .label{
+    position:absolute; bottom:20px; left:20px; right: 110px;
+    font-family: var(--serif-sc);
+    font-size: 10px; letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+  .video-frame .duration{
+    position:absolute; bottom:20px; right:20px;
+    font-family: var(--serif-sc);
+    font-size: 10px; letter-spacing: 3px;
+    color: var(--cream-2); opacity:.8;
+  }
+  .video-frame iframe{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  .player-cta{
+    margin-top: 22px;
+    width: 100%;
+    border: none; cursor: pointer;
+    font-family: var(--serif-sc);
+    font-weight: 500;
+    font-size: 13px; letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--ink);
+    padding: 20px 24px;
+    background: linear-gradient(180deg, var(--gold-soft) 0%, var(--gold) 55%, var(--gold-2) 100%);
+    border-radius: 2px;
+    box-shadow:
+      0 14px 32px rgba(201,169,97,0.22),
+      inset 0 1px 0 rgba(255,255,255,0.45),
+      inset 0 -1px 0 rgba(0,0,0,0.18);
+    transition: transform .15s, filter .2s;
+    min-height: 56px;
+  }
+  .player-cta:hover{transform: translateY(-1px); filter: brightness(1.06);}
+  .player-cta .arrow{display:inline-block; margin-left:10px; transition: transform .2s;}
+  .player-cta:hover .arrow{transform: translateX(4px);}
+
+  .player-secondary{
+    margin-top: 14px;
+    text-align:center;
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--cream-2);
+  }
+  .player-secondary a{
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+    font-style: italic;
+  }
+
+  /* ============== Mobile order ============== */
+  @media (max-width: 1000px){
+    .left{padding: 36px 22px 40px; border-right:none; border-bottom: 1px solid var(--line-strong);}
+    .right{padding: 44px 22px 56px;}
+    .sig-quote{margin-top: 32px;}
+    .form-card{ padding: 32px 22px 28px; }
+  }
+  @media (max-width: 480px){
+    .logo-lockup img{height: 64px; margin-left: -4px;}
+    .meta-row{gap: 12px 18px;}
+    .meta-row .item{flex-basis: 100%;}
+    h1.title{ font-size: 28px; }
+    .form-card .crest{ font-size: 12px; padding: 4px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<main class="stage">
+
+  <!-- ================ LEFT: copy ================ -->
+  <section class="left" data-screen-label="Hero">
+    <div class="logo-lockup">
+      <img src="logo-negreiros.png" alt="Negreiros e Marques Advocacia">
+      <div class="meta">
+        <b>N · M</b>
+        Advocacia Internacional
+      </div>
+    </div>
+
+    <div class="eyebrow"><span class="dot"></span>WEBINÁRIO · ACESSO IMEDIATO</div>
+
+    <h1 class="title">
+      <span class="small">Para brasileiros que vivem no exterior</span>
+      Casamento e Divórcio <em>Internacional</em> sem perder direitos no <em>Brasil</em>.
+    </h1>
+
+    <p class="lead">Descubra como casar ou se divorciar no exterior de forma legal, segura e válida no Brasil, evitando erros que travam documentos, vistos e a sua regularização civil.</p>
+
+    <div class="meta-row">
+      <div class="item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg></span>
+        <span class="txt"><b>Gravado</b>Assista quando quiser</span>
+      </div>
+      <div class="item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+        <span class="txt"><b>30 a 60 min</b>Webinário explicativo</span>
+      </div>
+      <div class="item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span>
+        <span class="txt"><b>100% online</b>Onde você estiver</span>
+      </div>
+    </div>
+
+    <div class="promise">
+      <h3>O que você vai descobrir</h3>
+      <ul>
+        <li><span class="num">i.</span><span>O caminho correto para casar ou se divorciar fora do Brasil, passo a passo, com critério jurídico.</span></li>
+        <li><span class="num">ii.</span><span><b>Como evitar os erros mais caros</b> em transcrições, averbações e atualizações de documentos.</span></li>
+        <li><span class="num">iii.</span><span><b>Como regularizar sua vida civil</b> nos dois lados, exterior e Brasil, sem precisar voltar.</span></li>
+        <li><span class="num">iv.</span><span><b>O que fazer com nome, RG, CPF, passaporte</b> e o seu estado civil perante os órgãos brasileiros.</span></li>
+      </ul>
+    </div>
+
+    <div class="sig-quote">
+      <b>“</b>Morar fora não significa abrir mão dos seus direitos no Brasil. Seu problema no Brasil tem solução daqui.<b>”</b>
+    </div>
+  </section>
+
+  <!-- ================ RIGHT: form / player ================ -->
+  <section class="right" data-screen-label="Form">
+
+    <div class="form-card">
+      <span class="ornt tl"></span><span class="ornt tr"></span>
+      <span class="ornt bl"></span><span class="ornt br"></span>
+
+      <!-- FORM STATE -->
+      <div class="form-wrap" id="formWrap">
+        <div class="form-eyebrow">Acesso ao webinário</div>
+        <h2 class="form-title">Libere agora seu <em>acesso gratuito</em>.</h2>
+        <p class="form-sub">Preencha os dados, ganhe acesso imediato ao webinário e assista no horário que for melhor para você.</p>
+
+        <form id="leadForm" novalidate>
+
+          <div class="field">
+            <label for="nome">Nome completo<span class="req">*</span></label>
+            <div class="input-wrap" id="wrapNome">
+              <span class="ico-left">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 5-6 8-6s7 2 8 6"></path></svg>
+              </span>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como você se chama?">
+              <span class="check-glyph">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6"></path></svg>
+              </span>
+            </div>
+            <div class="err-msg" id="errNome"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail<span class="req">*</span></label>
+            <div class="input-wrap" id="wrapEmail">
+              <span class="ico-left">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+              </span>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
+              <span class="check-glyph">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6"></path></svg>
+              </span>
+            </div>
+            <div class="err-msg" id="errEmail"></div>
+          </div>
+
+          <div class="field">
+            <label for="telefone">Telefone com WhatsApp<span class="req">*</span></label>
+            <div class="phone-row">
+              <div class="ddd-wrap">
+                <div class="input-wrap" id="wrapDDD">
+                  <input type="tel" id="ddd" name="ddd" inputmode="numeric" maxlength="2" placeholder="DDD" aria-label="DDD">
+                </div>
+              </div>
+              <div>
+                <div class="input-wrap" id="wrapTelefone">
+                  <span class="ico-left">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92V21a1 1 0 0 1-1.1 1A19 19 0 0 1 2 4.1 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.27 1L7.21 10.2a16 16 0 0 0 6.59 6.59l1.46-1.61a1 1 0 0 1 1-.27l4 1a1 1 0 0 1 .74 1.01z"></path></svg>
+                  </span>
+                  <input type="tel" id="telefone" name="telefone" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="00000-0000">
+                  <span class="check-glyph">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 6"></path></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="err-msg" id="errTelefone"></div>
+          </div>
+
+          <button class="btn-submit" type="submit" id="submitBtn">
+            <span class="btn-label">Enviar</span><span class="arrow">›</span>
+          </button>
+
+          <div class="form-trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+            Dados protegidos · LGPD · Sigilo profissional
+          </div>
+        </form>
+      </div>
+
+      <!-- PLAYER STATE -->
+      <div class="player-wrap" id="playerWrap" aria-hidden="true">
+        <div class="seal">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"></path></svg>
+        </div>
+        <div class="player-eyebrow">Acesso liberado</div>
+        <h2 class="player-title">Seu webinário está <em>pronto</em>, <span id="playerName">tudo certo</span>.</h2>
+        <p class="player-greet">Clique no vídeo abaixo para começar agora. Você pode pausar, voltar e assistir quantas vezes quiser. Também enviamos o link de acesso para o seu e-mail.</p>
+
+        <div class="video-frame" id="videoFrame" role="button" tabindex="0" aria-label="Assistir ao webinário">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <div class="play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="7 5 19 12 7 19 7 5"></polygon></svg>
+          </div>
+          <span class="label">Webinário · Casamento e Divórcio Internacional</span>
+          <span class="duration">≈ 42 min</span>
+        </div>
+
+        <button class="player-cta" id="watchBtn">
+          Assistir ao webinário<span class="arrow">›</span>
+        </button>
+
+        <p class="player-secondary">
+          Quer um direcionamento sobre o seu caso? <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Acabei%20de%20assistir%20o%20webin%C3%A1rio%20e%20gostaria%20de%20agendar%20uma%20consultoria." target="_blank" rel="noopener">Fale com o escritório no WhatsApp</a>
+        </p>
+      </div>
+
+    </div><!-- /form-card -->
+
+  </section>
+</main>
+
+<script>
+  // ============================================================
+  // CONFIG: substitua estas duas variáveis quando publicar.
+  // ============================================================
+  // 1) URL do Google Apps Script (publicado como Web App) que grava na planilha.
+  //    Para configurar, veja: https://developers.google.com/apps-script/guides/web
+  const SHEETS_WEBHOOK = ""; // ex: "https://script.google.com/macros/s/AKfycb.../exec"
+
+  // 2) URL do vídeo do webinário (Vimeo, YouTube embed, Wistia, MP4 etc).
+  //    Se vazio, mantém o placeholder visual.
+  const VIDEO_EMBED_URL = ""; // ex: "https://player.vimeo.com/video/123456789?autoplay=1"
+  // ============================================================
+
+  const $ = id => document.getElementById(id);
+  const dddEl  = $('ddd');
+  const telEl  = $('telefone');
+  const nomeEl = $('nome');
+  const emailEl= $('email');
+  const form   = $('leadForm');
+  const submitBtn = $('submitBtn');
+
+  const onlyDigits = s => (s || '').replace(/\D+/g,'');
+
+  dddEl.addEventListener('input', e => {
+    e.target.value = onlyDigits(e.target.value).slice(0,2);
+    if(e.target.value.length === 2) telEl.focus();
+    validateField('ddd');
+  });
+
+  telEl.addEventListener('input', e => {
+    let v = onlyDigits(e.target.value).slice(0,9);
+    if(v.length > 4){
+      const head = v.length > 8 ? 5 : 4;
+      v = v.slice(0, head) + '-' + v.slice(head);
+    }
+    e.target.value = v;
+    validateField('telefone');
+  });
+
+  telEl.addEventListener('keydown', e => {
+    if(e.key === 'Backspace' && e.target.selectionStart === 0 && e.target.value === ''){
+      dddEl.focus();
+    }
+  });
+
+  nomeEl.addEventListener('input',  () => validateField('nome'));
+  emailEl.addEventListener('input', () => validateField('email'));
+  nomeEl.addEventListener('blur',   () => validateField('nome', true));
+  emailEl.addEventListener('blur',  () => validateField('email', true));
+  dddEl.addEventListener('blur',    () => validateField('ddd', true));
+  telEl.addEventListener('blur',    () => validateField('telefone', true));
+
+  function setState(wrapId, errId, valid, msg){
+    const wrap = $(wrapId);
+    const err  = $(errId);
+    if(!wrap) return;
+    wrap.classList.remove('error', 'valid');
+    if(valid === true){
+      wrap.classList.add('valid');
+      if(err) err.textContent = '';
+    } else if(valid === false){
+      wrap.classList.add('error');
+      if(err) err.textContent = msg || '';
+    } else {
+      if(err) err.textContent = '';
+    }
+  }
+
+  function validateField(name, showErr){
+    if(name === 'nome'){
+      const v = nomeEl.value.trim();
+      if(!v) return setState('wrapNome','errNome', showErr ? false : null, 'Informe seu nome completo.');
+      if(v.split(/\s+/).length < 2) return setState('wrapNome','errNome', showErr ? false : null, 'Digite nome e sobrenome.');
+      return setState('wrapNome','errNome', true);
+    }
+    if(name === 'email'){
+      const v = emailEl.value.trim();
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      if(!v) return setState('wrapEmail','errEmail', showErr ? false : null, 'Informe seu e-mail.');
+      if(!re.test(v)) return setState('wrapEmail','errEmail', showErr ? false : null, 'E-mail inválido.');
+      return setState('wrapEmail','errEmail', true);
+    }
+    if(name === 'ddd'){
+      const v = onlyDigits(dddEl.value);
+      if(v.length !== 2) return setState('wrapDDD','errTelefone', showErr ? false : null, 'DDD com 2 dígitos.');
+      return setState('wrapDDD','errTelefone', true);
+    }
+    if(name === 'telefone'){
+      const v = onlyDigits(telEl.value);
+      if(v.length < 8) return setState('wrapTelefone','errTelefone', showErr ? false : null, 'Telefone com 8 ou 9 dígitos.');
+      return setState('wrapTelefone','errTelefone', true);
+    }
+  }
+
+  async function sendToSheets(payload){
+    if(!SHEETS_WEBHOOK) return { ok: true, demo: true };
+    try{
+      // Apps Script aceita POST simples (no-cors evita preflight CORS)
+      await fetch(SHEETS_WEBHOOK, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+      return { ok: true };
+    }catch(err){
+      console.error('Webhook error:', err);
+      return { ok: false, err };
+    }
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    validateField('nome', true);
+    validateField('email', true);
+    validateField('ddd', true);
+    validateField('telefone', true);
+
+    const allValid =
+      $('wrapNome').classList.contains('valid') &&
+      $('wrapEmail').classList.contains('valid') &&
+      $('wrapDDD').classList.contains('valid') &&
+      $('wrapTelefone').classList.contains('valid');
+
+    if(!allValid){
+      const firstErr = document.querySelector('.input-wrap.error');
+      if(firstErr){
+        firstErr.animate(
+          [{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],
+          {duration:380, easing:'ease-out'}
+        );
+        const inp = firstErr.querySelector('input'); if(inp) inp.focus();
+      }
+      return;
+    }
+
+    const payload = {
+      nome: nomeEl.value.trim(),
+      email: emailEl.value.trim(),
+      ddd: onlyDigits(dddEl.value),
+      telefone: onlyDigits(telEl.value),
+      produto: 'Webinario Casamento e Divorcio Internacional',
+      origem: location.href,
+      timestamp: new Date().toISOString()
+    };
+
+    submitBtn.disabled = true;
+    const original = submitBtn.querySelector('.btn-label').textContent;
+    submitBtn.querySelector('.btn-label').textContent = 'Liberando acesso...';
+
+    await sendToSheets(payload);
+
+    submitBtn.querySelector('.btn-label').textContent = original;
+    submitBtn.disabled = false;
+
+    const firstName = (payload.nome.split(/\s+/)[0] || '').toLowerCase()
+                       .replace(/(^|\s)\S/g, t => t.toUpperCase());
+    $('playerName').textContent = firstName || 'tudo certo';
+    document.body.classList.add('submitted');
+    $('formWrap').setAttribute('aria-hidden', 'true');
+    $('playerWrap').setAttribute('aria-hidden', 'false');
+
+    // scroll para player no mobile
+    setTimeout(() => {
+      $('playerWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  });
+
+  function launchVideo(){
+    const frame = $('videoFrame');
+    if(VIDEO_EMBED_URL){
+      // limpa overlays e injeta iframe
+      frame.innerHTML = '';
+      const iframe = document.createElement('iframe');
+      iframe.src = VIDEO_EMBED_URL;
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+      iframe.allowFullscreen = true;
+      frame.appendChild(iframe);
+    } else {
+      // placeholder até o vídeo ser conectado
+      alert('Em produção, o webinário começará a tocar aqui. Configure VIDEO_EMBED_URL no script.');
+    }
+  }
+  $('videoFrame').addEventListener('click', launchVideo);
+  $('videoFrame').addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); launchVideo(); }
+  });
+  $('watchBtn').addEventListener('click', launchVideo);
+</script>
+
+</body>
+</html>
